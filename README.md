@@ -46,7 +46,7 @@ Here an example :
 
 ### apps/expo-app package.json
 
-- Add all your Expo despendencies
+- Add all your Expo dependencies
 - Run all your Expo Cli commands from here or create a script entry in root package.json
 
 ### apps/next-app package.json
