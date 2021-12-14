@@ -1,0 +1,24 @@
+{
+  "name": "my-yarn-workspace-monorepo",
+  "version": "1.0.0",
+  "author": "rphlmr",
+  "private": true,
+  "scripts": {
+    "start-next": "yarn workspace next-app dev",
+    "start-expo-web": "yarn workspace expo-app web",
+    "clean-node-modules": "rm -rf apps/*/node_modules && rm -rf node_modules && rm -rf yarn.lock && rm -rf yarn-error.log"
+  },
+  "workspaces": {
+    "packages": [
+      "apps/*",
+      "packages/*"
+    ],
+    "nohoist": [
+      "**"
+    ]
+  },
+  "devDependencies": {
+    "eslint": "^8.4.1",
+    "prettier": "^2.5.1"
+  }
+}
