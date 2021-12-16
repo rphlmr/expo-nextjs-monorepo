@@ -1,9 +1,9 @@
 import { StatusBar } from "expo-status-bar";
 import React, { useState } from "react";
-import { TouchableOpacity } from "react-native";
 import makeStyles from "@me/app-ui/style";
 import ThemeProvider from "@me/app-ui/theme";
-import { View, H1, Text } from "dripsy";
+import { SimpleButton } from "@me/app-ui/components";
+import { View, Text, H1 } from "dripsy";
 
 const useStyles = makeStyles(({ isActive, theme }) => ({
   container: {
@@ -30,8 +30,9 @@ export default function App() {
     <ThemeProvider>
       <View style={styles.container}>
         <H1>Hello Sir</H1>
-        <Text>Open up App.js to start working on your app!</Text>
-        <TouchableOpacity
+        <Text sx={{ marginBottom: 50 }}>I'm a monorep demo app 🚀 !</Text>
+        <SimpleButton
+          label="Switch background color"
           onPress={() => {
             if (isActive) {
               setIsActive(false);
@@ -39,9 +40,8 @@ export default function App() {
               setIsActive(true);
             }
           }}
-        >
-          <Text>Change colors</Text>
-        </TouchableOpacity>
+        />
+
         <StatusBar style="auto" />
       </View>
     </ThemeProvider>

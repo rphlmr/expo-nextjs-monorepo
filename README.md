@@ -26,12 +26,10 @@ Here an example :
 
 `cd packages/app-ui`
 
-**BONUS** : you can add devDependencies to your shared packages. Metro and Webpack config will take care of it.
+**BONUS** : You can add `dependencies` to your shared packages. Metro and Webpack config will take care of it.
 
-/!\ you have to add these dependencies in your apps package.json. This is why I duplicate them in peerDependencies 
-
-(Yes, I read my console warnings :D )
-
+> If your shared packages have `react-*` dependencies, 
+> add `resolutions` option in your apps package.json to force yarn resolves your app `react-*` dependencies
 ___
 
 ### apps
@@ -59,12 +57,20 @@ ___
 ### apps/expo-app package.json
 
 - Add all your Expo dependencies
+- Add `resolutions` option in your package.json to force yarn resolves your app `react-*` dependencies
 - Run all your Expo Cli commands from here or create a script entry in root package.json
+- If your shared packages are not in `packages` folder, `update your metro.config.js` :
+  - `const sharedPackagesFolder = "MY_PACKAGE_FOLDER_NAME";`
 
 ### apps/next-app package.json
 
 - Add all your Next.js dependencies
+- Add `resolutions` option in your package.json to force yarn resolves your app `react-*` dependencies
 - Run all your Next.js Cli commands from here or create a script entry in root package.json
+
+### packages/[myPackage] package.json
+
+- Add all your [myPackage] dependencies
 
 ## License
 
