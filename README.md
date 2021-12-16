@@ -2,6 +2,8 @@
 
 This is an example showing how to create Expo and Next.js apps in a monorepo.
 
+New to Expo ? Follow https://docs.expo.dev/get-started/installation/
+
 ___
 
 ## Architecture
