@@ -5,12 +5,13 @@
   "scripts": {
     "start": "expo start",
     "android": "expo start --android",
-    "ios": "expo start --ios",
-    "web": "expo start --web",
+    "ios": "expo start --clear --ios",
+    "web": "expo start --clear --web",
     "eject": "expo eject"
   },
   "dependencies": {
-    "@me/my-lib": "*",
+    "@me/app-ui": "*",
+    "dripsy": "^3.6.0",
     "expo": "~43.0.2",
     "expo-status-bar": "~1.1.0",
     "react": "17.0.1",
@@ -19,7 +20,8 @@
     "react-native-web": "0.17.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.12.9"
+    "@babel/core": "^7.12.9",
+    "@expo/webpack-config": "^0.16.13"
   },
   "private": true
 }
