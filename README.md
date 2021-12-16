@@ -2,15 +2,19 @@
 
 This is an example showing how to create Expo and Next.js apps in a monorepo.
 
+___
+
 ## Architecture
 
 ### root package.json
 
 I choose to use workspace `nohoist` because Expo and Next.JS crash on startup, due to different `react-*` versions.
 
-Hoisting creates package resolution errors in Expo sub react-native modules.
+Hoisting creates package resolution errors.
 
 In this demo, every project has their own `node_modules`. The disk space lost is minor.
+
+___
 
 ### packages
 
@@ -20,7 +24,15 @@ In this demo, every project has their own `node_modules`. The disk space lost is
 
 Here an example : 
 
-`cd packages/my-lib`
+`cd packages/app-ui`
+
+**BONUS** : you can add devDependencies to your shared packages. Metro and Webpack config will take care of it.
+
+/!\ you have to add these dependencies in your apps package.json. This is why I duplicate them in peerDependencies 
+
+(Yes, I read my console warnings :D )
+
+___
 
 ### apps
 
