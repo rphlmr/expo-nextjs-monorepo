@@ -1,0 +1,16 @@
+{
+  "name": "@me/app-ui",
+  "private": true,
+  "version": "0.0.0",
+  "license": "MIT",
+  "devDependencies": {
+    "dripsy": "^3.6.0",
+    "react": "17.0.1",
+    "react-native": "0.64.3"
+  },
+  "peerDependencies": {
+    "dripsy": "^3.6.0",
+    "react": "17.0.1",
+    "react-native": "0.64.3"
+  }
+}

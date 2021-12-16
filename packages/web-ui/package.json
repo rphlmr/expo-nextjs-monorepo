@@ -1,10 +1,14 @@
 {
-  "name": "@me/my-lib",
+  "name": "@me/web-ui",
   "private": true,
   "version": "0.0.0",
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
     "lodash": "^4.17.21"
+  },
+  "peerDependencies": {
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
   }
 }
