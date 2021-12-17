@@ -77,3 +77,7 @@ ___
 ## License
 
 MIT
+
+## Inspiration
+
+Thanks to https://github.com/axeldelafosse/expo-next-monorepo-example
